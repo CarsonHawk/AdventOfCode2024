@@ -86,4 +86,38 @@ public class Day1 {
         int output = compareCharts(sortsy1, sortsy2);
         return output;
     }
+
+    // For part two of the puzzle, we'll need to have the data parsed, though not necessarily sorted.
+    // Though that can't hurt.
+
+    // Method to add up everything in an array.
+    private int sumArr(int[] input) {
+        int output = 0;
+        for (int item : input) {
+            output += item;
+        }
+        return output;
+    }
+
+    // Method to get how many times a number exists in an array.
+    public int getSimilarityScore(int num, int[] arr){
+        int counter = 0;
+        for(int item : arr){
+            if(item == num){
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    //TODO fix this, it doesn't get the right answer.  Even after a rewrite!  THINK!!!
+    public int solvePartTwo() throws FileNotFoundException {
+        parseFileData1(); // Probably not necessary.
+        for(int i = 0; i < 1000; i++){
+            int workingNum = trueChart1[i];
+            int newValue = getSimilarityScore(workingNum, trueChart2);
+            trueChart1[i] = newValue;
+        }
+        return sumArr(trueChart1);
+    }
 }

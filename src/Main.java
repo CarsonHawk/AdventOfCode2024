@@ -15,5 +15,7 @@ public class Main {
         }
         dayOneAnswer = day1.solvePuzzle();
         System.out.println("The answer for day 1 is: " + dayOneAnswer);
+        dayOneAnswer = day1.solvePartTwo();
+        System.out.println("The answer for the second part of day 1 is: "+dayOneAnswer);
     }
 }
