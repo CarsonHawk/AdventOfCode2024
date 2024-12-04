@@ -66,7 +66,7 @@ public class Day1 {
     public void parseFileData1() throws FileNotFoundException {
         // Pull in the text file.
         // We'll need a scanner.
-        Scanner fileParser = new Scanner(new File("inputs/adventofcode.com_2024_day_1_input.txt"));
+        Scanner fileParser = new Scanner(new File("C:\\JavaDev\\personal\\AdventOfCode2024\\src\\inputs\\adventofcode.com_2024_day_1_input.txt"));
         // Get the number of lines in the file and create an array with that many lines.
         // Or, hardcode it, since it's 1000 lines of data and then a blank line.
         trueChart1 = new int[1000];

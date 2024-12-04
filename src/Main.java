@@ -1,5 +1,7 @@
+import java.io.FileNotFoundException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         System.out.println("Hello world!");
         Day1 day1 = new Day1();
         int[] arr1 = {3, 4, 2, 1, 3, 3};
@@ -11,7 +13,7 @@ public class Main {
         } else{
             System.out.println("Day 1 fails!");
         }
-        dayOneAnswer = day1.compareCharts(day1.getTrueChart1(), day1.getTrueChart2());
+        dayOneAnswer = day1.solvePuzzle();
         System.out.println("The answer for day 1 is: " + dayOneAnswer);
     }
 }
