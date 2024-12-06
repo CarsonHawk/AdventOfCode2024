@@ -116,7 +116,7 @@ public class Day1 {
         for(int i = 0; i < 1000; i++){
             int workingNum = trueChart1[i];
             int newValue = getSimilarityScore(workingNum, trueChart2);
-            trueChart1[i] = newValue;
+            trueChart1[i] = workingNum * newValue;
         }
         return sumArr(trueChart1);
     }
